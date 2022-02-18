@@ -1,0 +1,869 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../fonts/fontawesome-free-5.15.4/fontawesome-free-5.15.4-web/css/all.min.css">
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/main.css">
+</head>
+
+<body>
+    <div class="app">
+        <header class="header">
+            <!--phần đc côi là block-->
+            <div class="grid">
+                <nav class="header__navbar">
+                    <!--phần này đc côi là element đc biểu thị(__)-->
+                    <ul class="header__navbar-list">
+                        <!--header QR Code-->
+                        <li class="header__navbar-item header__navbar-item--has--qr header__navbar-item--separate">
+                            Vào cửa hàng trên ứng dụng
+                            <div class="header__qr">
+                                <img src="img/qacode.png" alt="" class="header__qr-img">
+                                <div class="header__qr-apps">
+                                    <a href="#" class="header__qr-link">
+                                        <img src="img/gooleplay.png" alt=""
+                                            class="header__qr-download-img">
+                                    </a>
+                                    <a href="#" class="header__qr-link">
+                                        <img src="img/app.png" alt="App tore" class="header__qr-download-img">
+                                    </a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="header__navbar-item">
+                            <span class="header__navbar-title--no-pointer">Kết nối</span>
+                            <a href="#" class="header__navbar-icon-link">
+                                <i class="header__navbar-icon fab fa-facebook"></i>
+                            </a>
+                            <a href="#" class="header__navbar-icon-link">
+                                <i class="header__navbar-icon fab fa-instagram"></i>
+                            </a>
+                        </li>
+                    </ul>
+                    <ul class="header__navbar-list">
+                        <li class="header__navbar-item header__vavbar-item--has-notify">
+                            <a href="#" class="header__navbar-item-link">
+                                <i class="header__navbar-icon far fa-bell"></i>
+                                Thông báo
+                            </a>
+                            <div class="header__notify">
+                                <header class="header__notify-header">
+                                    <h3>Thông báo mới nhận</h3>
+                                </header>
+                                <ul class="header__notify-list">
+                                    <li class="header__notify-item header__notify-item--viewed">
+                                        <a href="#" class="header__notify-link">
+                                            <img src="img/iphone-12-pro-max-128G.jpg" alt="" class="header__notify-img">
+                                            <div class="header__notify-info">
+                                                <span class="header__notify-name">Iphone 12 promax chính hãng</span>
+                                                <span class="header__notify-descriotion">Mootar sản phẩm chính
+                                                    hãng</span>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class="header__notify-item">
+                                        <a href="#" class="header__notify-link">
+                                            <img src="img/iphone-12-pro-max-trang-128G.jpg" alt=""
+                                                class="header__notify-img">
+                                            <div class="header__notify-info">
+                                                <span class="header__notify-name">Xác thực Iphone 12 promax chính hãng
+                                                    của công ty</span>
+                                                <span class="header__notify-descriotion">Mô tả sản phẩm chính hãng của
+                                                    công ty chúng tôi</span>
+                                            </div>
+                                        </a>
+                                    </li>
+                                </ul>
+                                <footer class="header__notify-footer">
+                                    <a href="#" class="header__notify-footer-btn">
+                                        Xem tất cả
+                                    </a>
+                                </footer>
+                            </div>
+                        </li>
+                        <li class="header__navbar-item">
+                            <a href="#" class="header__navbar-item-link">
+                                <i class="header__navbar-icon far fa-question-circle"></i>
+                                Trợ giúp
+                            </a>
+                        </li>
+                        <!--<li class="header__navbar-item header__navbar-item--strong header__navbar-item--separate">Đăng ký</li>-->
+                        <!--<li class="header__navbar-item header__navbar-item--strong">Đăng nhập</li>-->
+                        <li class="header__navbar-item header__navbar-user">
+                            <i class="header__navbar-user-img fas fa-user-circle"></i>
+                            <span class="header__navbar-user-name">Đặng Văn Tốt</span>
+                            <ul class="header__navbar-user-menu">
+                                <li class="header__navbar-user-item">
+                                    <a href="" class="">Tài khoản của tôi</a>
+                                </li>
+                                <li class="header__navbar-user-item">
+                                    <a href="" class="">Địa chỉ của tôi</a>
+                                </li>
+                                <li class="header__navbar-user-item">
+                                    <a href="" class="">Đơn mua</a>
+                                </li>
+                                <li class="header__navbar-user-item header__navbar-user-item--separate">
+                                    <a href="" class="">Đăng xuất</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+                <!-- header wth search -->
+                <div class="header-with-search">
+                    <div class="header__logo">
+                        <a href="/f8-shop/assets/index.html" class="header__logo-img">
+                            <i class="header__logo-icon fas fa-mobile-alt"></i>
+                            <span class="header__font">Shopphone</span>
+                        </a>
+                    </div>
+                    <div class="header__search">
+                        <div class="header__search-input-wrap">
+                            <input type="text" class="header__search-input" placeholder="Nhập để tìm kiếm sản phẩm">
+                            <!-- search history -->
+                            <div class="header__search-history">
+                                <h3 class="header__search-history-heading">Lịch sử tìm kiếm</h3>
+                                <ul class="header__search-history-list">
+                                    <li class="header__search-history-item">
+                                        <a href="#">Iphone 12 pr</a>
+                                    </li>
+                                    <li class="header__search-history-item">
+                                        <a href="#">Iphone 13 pr</a>
+                                    </li>
+                                    <li class="header__search-history-item">
+                                        <a href="#">Iphone 13 pr max</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="header__search-select">
+                            <span class="header__search-select-label">Trong shop</span>
+                            <i class="header__search-select-icon fas fa-angle-down"></i>
+                            <ul class="header__search-option">
+                                <li class="header__search-option-item header__search-option-item-active">
+                                    <span>Trong shop</span>
+                                    <i class="fas fa-check"></i>
+                                </li>
+                                <li class="header__search-option-item">
+                                    <span>Ngoài shop</span>
+                                    <i class="fas fa-check"></i>
+                                </li>
+                            </ul>
+                        </div>
+                        <button class="header__search-btn">
+                            <i class="header__search-btn-icon fas fa-search"></i>
+                        </button>
+                    </div>
+                    <!-- cart layout -->
+                   <div class="header__cart">
+                        <div class="header__cart-wrap">
+                            <i class="header__cart-icon fas fa-shopping-cart"></i>
+                            <!-- <span class="header__cart-notice">
+                                2
+                            </span>
+                            <-- No: cart dành cho khi không có sản phẩm thì để trong div dưới nay :header__cart-list--no--cart --
+
+                            <div class="header__cart-list thêm dòng trên tại đây">
+                                <img src="./img/icon__giohang-trong.png" alt="" class="header__cart-no-cart-img">
+                                <span class="header__cart-list-no-cart-msg">
+                                    Chưa có sản phẩm
+                                </span>
+
+                                Cart item 
+                                <h4 class="header__cart-heading">Sản phẩm đã thêm</h4>
+                                <ul class="header__cart-list-item">
+                                    <li class="header__cart-item">
+                                        <img src="./img/iphone-12-pro-max-128G.jpg" alt="" class="header__cart-img">
+                                        <div class="header__cart-item-info">
+                                            <div class="header__cart-item-head">
+                                                <h5 class="header__cart-item-name">iphone-12-pro-max-128G</h5>
+                                                <div class="header__cart-item-price-wrap">
+                                                    <span class="header__cart-item-price">25.000.000đ</span>
+                                                    <span class="header__cart-item-multipfy">
+                                                        x
+                                                    </span>
+                                                    <span class="header__cart-item-qnt">
+                                                        2
+                                                    </span>
+                                                </div>
+                                            </div>
+                                            <div class="header__cart-item-body">
+                                                <span class="header__cart-item-description">
+                                                    Phân loại màu: Xám
+                                                </span>
+                                                <span class="header__cart-item-remove">
+                                                    Xóa
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="header__cart-item">
+                                        <img src="./img/iphone-12-pro-max-trang-128G.jpg" alt=""
+                                            class="header__cart-img">
+                                        <div class="header__cart-item-info">
+                                            <div class="header__cart-item-head">
+                                                <h5 class="header__cart-item-name">iphone-12-pro-max-128G</h5>
+                                                <div class="header__cart-item-price-wrap">
+                                                    <span class="header__cart-item-price">27.000.000đ</span>
+                                                    <span class="header__cart-item-multipfy">
+                                                        x
+                                                    </span>
+                                                    <span class="header__cart-item-qnt">
+                                                        2
+                                                    </span>
+                                                </div>
+                                            </div>
+                                            <div class="header__cart-item-body">
+                                                <span class="header__cart-item-description">
+                                                    Phân loại màu: Trắng
+                                                </span>
+                                                <span class="header__cart-item-remove">
+                                                    Xóa
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                                <a href="" class="header__cart-view-cart btn btn--primary">Xem giỏ hàng</a>
+                            </div>
+                        </div>
+                    </div>-->
+                </div>  
+            </div>
+        </header>
+
+        <!------------ header banner---------->
+        <div class="header__banner">
+            <a href="#" class="header__banner-img">
+                <img src="//cdn.tgdd.vn/2021/10/banner/1200-44-1200x44-3.png" alt="">
+            </a>
+        </div>
+
+        <!------------ App container---------->
+        <div class="app__container">
+            <div class="grid">
+                <div class="grid__row">
+                    <!-- /* ---------------category------------- */ -->
+                    <div class="grid__column-2">
+                        <nav class="category">
+                            <h3 class="category__heading">
+                                <i class="category__heading-icon fas fa-list-ul"></i>
+                                Danh mục
+                            </h3>
+                            <ul class="category-list">
+                                <li class="category-item "><!-- category-item--active"> dấu tam giác-->
+                                    <a href="#" class="category-item__link">Apple</a>
+                                </li>
+                                <li class="category-item">
+                                    <a href="#" class="category-item__link">Samsung</a>
+                                </li>
+                                <li class="category-item ">
+                                    <a href="#" class="category-item__link">Xaomi</a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <!-- /*----------- home filter---------- */ -->
+                    <div class="grid__column-10">
+                        <div class="home__filter">
+                            <span class="home__filter-label">Sắp xếp theo</span>
+                            <button class="home-filter__btn btn">Phổ biến</button>
+                            <button class="home-filter__btn btn btn--primary">Mới Nhất</button>
+                            <button class="home-filter__btn btn">Bán chạy</button>
+
+                         <!-- --------Selection---- -->
+                            <div class="select-input">
+                                <span class="select-input__label">Giá</span>
+                                <i class="select-input__icon fas fa-angle-down"></i>
+                                <ul class="select-input__list">
+                                    <li class="select-input__item">
+                                        <a href="#" class="select-input__link">Giá: Thấp đến cao</a>
+                                    </li>
+                                    <li class="select-input__item">
+                                        <a href="#" class="select-input__link">Giá: Cao đến thấp</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="home-filter__page">
+                                <span class="home-filte__page-num">
+                                    <span class="home-filter__page-current">1</span>
+                                    /14
+                                </span>
+                                <div class="home-filter__page-control">
+                                    <a href="" class="home-filter__page-btn home-filter__btn--disabled">
+                                        <i class="home-filter__page-icon fas fa-angle-left"></i>
+                                    </a>
+                                    <a href="" class="home-filter__page-btn">
+                                        <i class="home-filter__page-icon fas fa-angle-right"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    
+                        <!--------- home-product---------- -->
+                        <div class="home-product">
+                            <div class="grid__row">
+                                <div class="grid__column-2-4">
+                                    <!-- product item -->
+                                    <div class="home-product-item">
+                                        <a href="#" class="home-product-item__img" style="background-image: url(/f8-shop/assets/img/iphone-12-pro-max-128G.jpg)"></a>
+                                        <a href="#" class="home-product-item__name">iPhone 12 Pro Max 128GB</a>
+                                        <div class="home-product-item__price">
+                                            <span class="home-product-item__price-old">12.000.000đ</span>
+                                            <span class="home-product-item__price-current">11.399.000đ</span>
+                                        </div>                                       
+                                        <div class="home-product-item__action">
+                                            <span class="home-product-item__like home-product-item__like--liked">
+                                                <i class="home-product-item__like-icon-empty far fa-heart"></i>
+                                                <i class="home-product-item__like-icon-fill fas fa-heart"></i>
+                                            </span>
+                                            <div class="home-product-item__rating">
+                                                <!-- Ngôi sao đặt ruột -->
+                                                <i class="home-product-item__star--gold fas fa-star"></i>
+                                                <i class="home-product-item__star--gold fas fa-star"></i>
+                                                <i class="home-product-item__star--gold fas fa-star"></i>
+                                                <i class="home-product-item__star--gold fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                            </div>
+                                            <span class="home-product-item__sold">88 đã bán</span>
+                                        </div>
+                                        <div class="home-product-item__origin">
+                                            <span class="home-product-item__brand">Whoo</span>
+                                            <span class="home-product-item__brand">TPHCM</span>
+                                        </div>
+                                        <div class="home-product-item__favourite">
+                                            <i class="fas fa-check"></i>
+                                            <span>Yêu thích</span>
+                                        </div>
+                                        <div class="home-product-item__sale--off">
+                                            <span class="home-product-item__sale-off-percent">10%</span>
+                                            <span class="home-product-item__sale-off-label">GIẢM</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="grid__column-2-4">
+                                    <!-- product item -->
+                                    <div class="home-product-item">
+                                        <a href="#" class="home-product-item__img" style="background-image: url(/f8-shop/assets/img/iphone-12-pro-max-128G.jpg);"></a>
+                                        <a href="#" class="home-product-item__name">iPhone 12 Pro Max 128GB</a>
+                                        <div class="home-product-item__price">
+                                            <span class="home-product-item__price-old">12.000.000đ</span>
+                                            <span class="home-product-item__price-current">11.399.000đ</span>
+                                        </div>                                       
+                                        <div class="home-product-item__action">
+                                            <span class="home-product-item__like home-product-item__like--liked">
+                                                <i class="home-product-item__like-icon-empty far fa-heart"></i>
+                                                <i class="home-product-item__like-icon-fill fas fa-heart"></i>
+                                            </span>
+                                            <div class="home-product-item__rating">
+                                                <!-- Ngôi sao đặt ruột -->
+                                                <i class="home-product-item__star--gold fas fa-star"></i>
+                                                <i class="home-product-item__star--gold fas fa-star"></i>
+                                                <i class="home-product-item__star--gold fas fa-star"></i>
+                                                <i class="home-product-item__star--gold fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                            </div>
+                                            <span class="home-product-item__sold">88 đã bán</span>
+                                        </div>
+                                        <div class="home-product-item__origin">
+                                            <span class="home-product-item__brand">Whoo</span>
+                                            <span class="home-product-item__brand">TPHCM</span>
+                                        </div>
+                                        <div class="home-product-item__favourite">
+                                            <i class="fas fa-check"></i>
+                                            <span>Yêu thích</span>
+                                        </div>
+                                        <div class="home-product-item__sale--off">
+                                            <span class="home-product-item__sale-off-percent">10%</span>
+                                            <span class="home-product-item__sale-off-label">GIẢM</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="grid__column-2-4">
+                                    <!-- product item -->
+                                    <div class="home-product-item">
+                                        <a href="#" class="home-product-item__img" style="background-image: url(/f8-shop/assets/img/iphone-12-pro-max-128G.jpg);"></a>
+                                        <a href="#" class="home-product-item__name">iPhone 12 Pro Max 128GB</a>
+                                        <div class="home-product-item__price">
+                                            <span class="home-product-item__price-old">12.000.000đ</span>
+                                            <span class="home-product-item__price-current">11.399.000đ</span>
+                                        </div>                                       
+                                        <div class="home-product-item__action">
+                                            <span class="home-product-item__like home-product-item__like--liked">
+                                                <i class="home-product-item__like-icon-empty far fa-heart"></i>
+                                                <i class="home-product-item__like-icon-fill fas fa-heart"></i>
+                                            </span>
+                                            <div class="home-product-item__rating">
+                                                <!-- Ngôi sao đặt ruột -->
+                                                <i class="home-product-item__star--gold fas fa-star"></i>
+                                                <i class="home-product-item__star--gold fas fa-star"></i>
+                                                <i class="home-product-item__star--gold fas fa-star"></i>
+                                                <i class="home-product-item__star--gold fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                            </div>
+                                            <span class="home-product-item__sold">88 đã bán</span>
+                                        </div>
+                                        <div class="home-product-item__origin">
+                                            <span class="home-product-item__brand">Whoo</span>
+                                            <span class="home-product-item__brand">TPHCM</span>
+                                        </div>
+                                        <div class="home-product-item__favourite">
+                                            <i class="fas fa-check"></i>
+                                            <span>Yêu thích</span>
+                                        </div>
+                                        <div class="home-product-item__sale--off">
+                                            <span class="home-product-item__sale-off-percent">10%</span>
+                                            <span class="home-product-item__sale-off-label">GIẢM</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="grid__column-2-4">
+                                    <!-- product item -->
+                                    <div class="home-product-item">
+                                        <a href="#" class="home-product-item__img" style="background-image: url(/f8-shop/assets/img/iphone-12-pro-max-128G.jpg);"></a>
+                                        <a href="#" class="home-product-item__name">iPhone 12 Pro Max 128GB</a>
+                                        <div class="home-product-item__price">
+                                            <span class="home-product-item__price-old">12.000.000đ</span>
+                                            <span class="home-product-item__price-current">11.399.000đ</span>
+                                        </div>                                       
+                                        <div class="home-product-item__action">
+                                            <span class="home-product-item__like home-product-item__like--liked">
+                                                <i class="home-product-item__like-icon-empty far fa-heart"></i>
+                                                <i class="home-product-item__like-icon-fill fas fa-heart"></i>
+                                            </span>
+                                            <div class="home-product-item__rating">
+                                                <!-- Ngôi sao đặt ruột -->
+                                                <i class="home-product-item__star--gold fas fa-star"></i>
+                                                <i class="home-product-item__star--gold fas fa-star"></i>
+                                                <i class="home-product-item__star--gold fas fa-star"></i>
+                                                <i class="home-product-item__star--gold fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                            </div>
+                                            <span class="home-product-item__sold">88 đã bán</span>
+                                        </div>
+                                        <div class="home-product-item__origin">
+                                            <span class="home-product-item__brand">Whoo</span>
+                                            <span class="home-product-item__brand">TPHCM</span>
+                                        </div>
+                                        <div class="home-product-item__favourite">
+                                            <i class="fas fa-check"></i>
+                                            <span>Yêu thích</span>
+                                        </div>
+                                        <div class="home-product-item__sale--off">
+                                            <span class="home-product-item__sale-off-percent">10%</span>
+                                            <span class="home-product-item__sale-off-label">GIẢM</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="grid__column-2-4">
+                                    <!-- product item -->
+                                    <div class="home-product-item">
+                                        <a href="#" class="home-product-item__img" style="background-image: url(/f8-shop/assets/img/iphone-12-pro-max-128G.jpg);"></a>
+                                        <a href="#" class="home-product-item__name">iPhone 12 Pro Max 128GB</a>
+                                        <div class="home-product-item__price">
+                                            <span class="home-product-item__price-old">12.000.000đ</span>
+                                            <span class="home-product-item__price-current">11.399.000đ</span>
+                                        </div>                                       
+                                        <div class="home-product-item__action">
+                                            <span class="home-product-item__like home-product-item__like--liked">
+                                                <i class="home-product-item__like-icon-empty far fa-heart"></i>
+                                                <i class="home-product-item__like-icon-fill fas fa-heart"></i>
+                                            </span>
+                                            <div class="home-product-item__rating">
+                                                <!-- Ngôi sao đặt ruột -->
+                                                <i class="home-product-item__star--gold fas fa-star"></i>
+                                                <i class="home-product-item__star--gold fas fa-star"></i>
+                                                <i class="home-product-item__star--gold fas fa-star"></i>
+                                                <i class="home-product-item__star--gold fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                            </div>
+                                            <span class="home-product-item__sold">88 đã bán</span>
+                                        </div>
+                                        <div class="home-product-item__origin">
+                                            <span class="home-product-item__brand">Whoo</span>
+                                            <span class="home-product-item__brand">TPHCM</span>
+                                        </div>
+                                        <div class="home-product-item__favourite">
+                                            <i class="fas fa-check"></i>
+                                            <span>Yêu thích</span>
+                                        </div>
+                                        <div class="home-product-item__sale--off">
+                                            <span class="home-product-item__sale-off-percent">10%</span>
+                                            <span class="home-product-item__sale-off-label">GIẢM</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="grid__column-2-4">
+                                    <!-- product item -->
+                                    <div class="home-product-item">
+                                        <a href="#" class="home-product-item__img" style="background-image: url(/f8-shop/assets/img/iphone-12-pro-max-128G.jpg);"></a>
+                                        <a href="#" class="home-product-item__name">iPhone 12 Pro Max 128GB</a>
+                                        <div class="home-product-item__price">
+                                            <span class="home-product-item__price-old">12.000.000đ</span>
+                                            <span class="home-product-item__price-current">11.399.000đ</span>
+                                        </div>                                       
+                                        <div class="home-product-item__action">
+                                            <span class="home-product-item__like home-product-item__like--liked">
+                                                <i class="home-product-item__like-icon-empty far fa-heart"></i>
+                                                <i class="home-product-item__like-icon-fill fas fa-heart"></i>
+                                            </span>
+                                            <div class="home-product-item__rating">
+                                                <!-- Ngôi sao đặt ruột -->
+                                                <i class="home-product-item__star--gold fas fa-star"></i>
+                                                <i class="home-product-item__star--gold fas fa-star"></i>
+                                                <i class="home-product-item__star--gold fas fa-star"></i>
+                                                <i class="home-product-item__star--gold fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                            </div>
+                                            <span class="home-product-item__sold">88 đã bán</span>
+                                        </div>
+                                        <div class="home-product-item__origin">
+                                            <span class="home-product-item__brand">Whoo</span>
+                                            <span class="home-product-item__brand">TPHCM</span>
+                                        </div>
+                                        <div class="home-product-item__favourite">
+                                            <i class="fas fa-check"></i>
+                                            <span>Yêu thích</span>
+                                        </div>
+                                        <div class="home-product-item__sale--off">
+                                            <span class="home-product-item__sale-off-percent">10%</span>
+                                            <span class="home-product-item__sale-off-label">GIẢM</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="grid__column-2-4">
+                                    <!-- product item -->
+                                    <div class="home-product-item">
+                                        <a href="#" class="home-product-item__img" style="background-image: url(/f8-shop/assets/img/iphone-12-pro-max-128G.jpg);"></a>
+                                        <a href="#" class="home-product-item__name">iPhone 12 Pro Max 128GB</a>
+                                        <div class="home-product-item__price">
+                                            <span class="home-product-item__price-old">12.000.000đ</span>
+                                            <span class="home-product-item__price-current">11.399.000đ</span>
+                                        </div>                                       
+                                        <div class="home-product-item__action">
+                                            <span class="home-product-item__like home-product-item__like--liked">
+                                                <i class="home-product-item__like-icon-empty far fa-heart"></i>
+                                                <i class="home-product-item__like-icon-fill fas fa-heart"></i>
+                                            </span>
+                                            <div class="home-product-item__rating">
+                                                <!-- Ngôi sao đặt ruột -->
+                                                <i class="home-product-item__star--gold fas fa-star"></i>
+                                                <i class="home-product-item__star--gold fas fa-star"></i>
+                                                <i class="home-product-item__star--gold fas fa-star"></i>
+                                                <i class="home-product-item__star--gold fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                            </div>
+                                            <span class="home-product-item__sold">88 đã bán</span>
+                                        </div>
+                                        <div class="home-product-item__origin">
+                                            <span class="home-product-item__brand">Whoo</span>
+                                            <span class="home-product-item__brand">TPHCM</span>
+                                        </div>
+                                        <div class="home-product-item__favourite">
+                                            <i class="fas fa-check"></i>
+                                            <span>Yêu thích</span>
+                                        </div>
+                                        <div class="home-product-item__sale--off">
+                                            <span class="home-product-item__sale-off-percent">10%</span>
+                                            <span class="home-product-item__sale-off-label">GIẢM</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="grid__column-2-4">
+                                    <!-- product item -->
+                                    <div class="home-product-item">
+                                        <a href="#" class="home-product-item__img" style="background-image: url(/f8-shop/assets/img/iphone-12-pro-max-128G.jpg);"></a>
+                                        <a href="#" class="home-product-item__name">iPhone 12 Pro Max 128GB</a>
+                                        <div class="home-product-item__price">
+                                            <span class="home-product-item__price-old">12.000.000đ</span>
+                                            <span class="home-product-item__price-current">11.399.000đ</span>
+                                        </div>                                       
+                                        <div class="home-product-item__action">
+                                            <span class="home-product-item__like home-product-item__like--liked">
+                                                <i class="home-product-item__like-icon-empty far fa-heart"></i>
+                                                <i class="home-product-item__like-icon-fill fas fa-heart"></i>
+                                            </span>
+                                            <div class="home-product-item__rating">
+                                                <!-- Ngôi sao đặt ruột -->
+                                                <i class="home-product-item__star--gold fas fa-star"></i>
+                                                <i class="home-product-item__star--gold fas fa-star"></i>
+                                                <i class="home-product-item__star--gold fas fa-star"></i>
+                                                <i class="home-product-item__star--gold fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                            </div>
+                                            <span class="home-product-item__sold">88 đã bán</span>
+                                        </div>
+                                        <div class="home-product-item__origin">
+                                            <span class="home-product-item__brand">Whoo</span>
+                                            <span class="home-product-item__brand">TPHCM</span>
+                                        </div>
+                                        <div class="home-product-item__favourite">
+                                            <i class="fas fa-check"></i>
+                                            <span>Yêu thích</span>
+                                        </div>
+                                        <div class="home-product-item__sale--off">
+                                            <span class="home-product-item__sale-off-percent">10%</span>
+                                            <span class="home-product-item__sale-off-label">GIẢM</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="grid__column-2-4">
+                                    <!-- product item -->
+                                    <div class="home-product-item">
+                                        <a href="#" class="home-product-item__img" style="background-image: url(/f8-shop/assets/img/iphone-12-pro-max-128G.jpg);"></a>
+                                        <a href="#" class="home-product-item__name">iPhone 12 Pro Max 128GB</a>
+                                        <div class="home-product-item__price">
+                                            <span class="home-product-item__price-old">12.000.000đ</span>
+                                            <span class="home-product-item__price-current">11.399.000đ</span>
+                                        </div>                                       
+                                        <div class="home-product-item__action">
+                                            <span class="home-product-item__like home-product-item__like--liked">
+                                                <i class="home-product-item__like-icon-empty far fa-heart"></i>
+                                                <i class="home-product-item__like-icon-fill fas fa-heart"></i>
+                                            </span>
+                                            <div class="home-product-item__rating">
+                                                <!-- Ngôi sao đặt ruột -->
+                                                <i class="home-product-item__star--gold fas fa-star"></i>
+                                                <i class="home-product-item__star--gold fas fa-star"></i>
+                                                <i class="home-product-item__star--gold fas fa-star"></i>
+                                                <i class="home-product-item__star--gold fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                            </div>
+                                            <span class="home-product-item__sold">88 đã bán</span>
+                                        </div>
+                                        <div class="home-product-item__origin">
+                                            <span class="home-product-item__brand">Whoo</span>
+                                            <span class="home-product-item__brand">TPHCM</span>
+                                        </div>
+                                        <div class="home-product-item__favourite">
+                                            <i class="fas fa-check"></i>
+                                            <span>Yêu thích</span>
+                                        </div>
+                                        <div class="home-product-item__sale--off">
+                                            <span class="home-product-item__sale-off-percent">10%</span>
+                                            <span class="home-product-item__sale-off-label">GIẢM</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!----------- pagination------- -->
+                        <ul class="pagination home home-product--pagination">
+                            <li class="pagination-item">
+                                <a href="#" class="pagination-item__link">
+                                    <i class="pagination-item__icon fas fa-angle-left"></i>
+                                </a>
+                            </li>
+                            <li class="pagination-item pagination-item--active">
+                                <a href="#" class="pagination-item__link">1</a>
+                            </li>
+                            <li class="pagination-item">
+                                <a href="#" class="pagination-item__link">2</a>
+                            </li>
+                            <li class="pagination-item">
+                                <a href="#" class="pagination-item__link">3</a>
+                            </li>
+                            <li class="pagination-item">
+                                <a href="#" class="pagination-item__link">4</a>
+                            </li>
+                            <li class="pagination-item">
+                                <a href="#" class="pagination-item__link">5</a>
+                            </li>
+                            <li class="pagination-item">
+                                <a href="#" class="pagination-item__link">...</a>
+                            </li>
+                            <li class="pagination-item">
+                                <a href="#" class="pagination-item__link">14</a>
+                            </li>
+                            <li class="pagination-item">
+                                <a href="#" class="pagination-item__link">
+                                    <i class="pagination-item__icon fas fa-angle-right"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer class="footer">
+            <div class="grid">
+                <div class="grid__row">
+                    <div class="grid__column-2-4">
+                        <h3 class="footer__heading">Chăm sóc khách hàng</h3>
+                        <ul class="footer__list">
+                            <li class="footer-item">
+                                <a href="#" class="footer-item__link">Trung tâm trợ giúp</a>
+                            </li>
+                            <li class="footer-item">
+                                <a href="#" class="footer-item__link">Shopphone Mall</a>
+                            </li>
+                            <li class="footer-item">
+                                <a href="#" class="footer-item__link">Hướng dẫn mua hàng</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="grid__column-2-4">
+                        <h3 class="footer__heading">Giới thiệu</h3>
+                        <ul class="footer__list">
+                            <li class="footer-item">
+                                <a href="#" class="footer-item__link">Giới thiệu</a>
+                            </li>
+                            <li class="footer-item">
+                                <a href="#" class="footer-item__link">Tuyển dụng</a>
+                            </li>
+                            <li class="footer-item">
+                                <a href="#" class="footer-item__link">Điều khoản</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="grid__column-2-4">
+                        <h3 class="footer__heading">Theo dỗi chúng tôi</h3>
+                        <ul class="footer__list">
+                            <li class="footer-item">
+                                <a href="#" class="footer-item__link">
+                                    <i class="footer-item__icon fab fa-facebook"></i>
+                                    Facebook
+                                </a>
+                            </li>
+                            <li class="footer-item">
+                                <a href="#" class="footer-item__link">
+                                    <i class="footer-item__icon fab fa-instagram"></i>
+                                    Instagram
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="grid__column-2-4">
+                        <h3 class="footer__heading">Danh mục</h3>
+                        <ul class="footer__list">
+                            <li class="footer-item">
+                                <a href="#" class="footer-item__link">APPLE</a>
+                            </li>
+                            <li class="footer-item">
+                                <a href="#" class="footer-item__link">SAMSUNG</a>
+                            </li>
+                            <li class="footer-item">
+                                <a href="#"  class="footer-item__link">XAOMI</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="grid__column-2-4">
+                        <h3 class="footer__heading">vào cửa hàng trên ưng dụng</h3>
+                        <div class="footer__download">
+                            <img src="/f8-shop/assets/img/qacode.png" alt="" class="footer__download-qr">
+                            <div class="footer__download-appa">
+                                <a href="#" class="footer__download-apps-link">
+                                    <img src="/f8-shop/assets/img/gooleplay.png" alt="" class="footer__download-apps-img">
+                                </a>
+                                <a href="#" class="footer__download-apps-link">
+                                    <img src="/f8-shop/assets/img/app.png" alt="App tore" class="footer__download-apps-img">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <div class="grid">
+                    <p class="footer__text">2021 - Bản quyền thuộc về Shopphone</p>
+                </div> 
+            </div>
+        </footer>
+    </div>
+    <!-- phần đăng ký & đăng nhập-->
+        <!--modal-->
+        <!-- Register from -->
+        <!-- <div class="modal"> -->
+            <!-- <div class="modal__overlay"></div> -->
+            <!-- <div class="modal__body"> -->
+                <!-- <div class="auth-from"> -->
+                    <!-- <div class="auth-from__container"> -->
+                        <!-- <div class="auth-from__header"> 
+                                <h3 class="auth-from__heading">Đăng ký</h3>
+                                <span class="auth-from__switch-btn">Đăng nhập</span>
+                            </div>
+                            <div class="auth-from__from">
+                                <div class="auth-from__group">
+                                    <input type="text" class="auth-from__input" placeholder="Email của bạn">
+                                </div>
+                                <div class="auth-from__group">
+                                    <input type="password" class="auth-from__input" placeholder="Mật khẩu của bạn">
+                                </div>
+                                <div class="auth-from__group">
+                                    <input type="password" class="auth-from__input" placeholder="Nhập lại mật khẩu của bạn">
+                                </div>
+                            </div>
+                            <div class="auth-from__aside">
+                                <p class="auth-from__policy-text">
+                                    Bằng việc đăng kí, bạn đã đồng ý với shop về
+                                    <a href="#" class="auth-from__text-link">Điều khoản dịch vụ</a> &
+                                    <a href="#" class="auth-from__text-link">Chính sách bảo mật</a>
+                                </p>
+                            </div>
+                            <div class="auth-from__controls">
+                                <button class="btn btn--normal  auth-from__controls-back">TRỞ LẠI</button>
+                                <button class="btn btn--primary">ĐĂNG KÝ</button>
+                            </div> 
+                        </div>
+                        <div class="auth-from__socials">
+                            <a href="#" class="auth-from__socials--facebook btn btn--size-s btn--with-icon">
+                                <i class="auth-from__socials-icon fab fa-facebook-square"></i>
+                                <span class="auth-from__socials-titel">Kết nói với Facebook</span>
+                            </a>
+                            <a href="#" class="auth-from__socials--google btn btn--size-s btn--with-icon">
+                                <i class="auth-from__socials-icon fab fa-google"></i>
+                                <span class="auth-from__socials-titel"> Kết nói với Google</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="auth-from">
+                        <div class="auth-from__container">
+                            <div class="auth-from__header">
+                                <h3 class="auth-from__heading">Đăng Nhập</h3>
+                                <span class="auth-from__switch-btn">Đăng ký</span>
+                            </div>
+                            <div class="auth-from__from">
+                                <div class="auth-from__group">
+                                    <input type="text" class="auth-from__input" placeholder="Email của bạn">
+                                </div>
+                                <div class="auth-from__group">
+                                    <input type="password" class="auth-from__input" placeholder="Mật khẩu của bạn">
+                                </div>
+                            </div>
+                            <div class="auth-from__aside">
+                                <div class="auth-from__help">
+                                    <a href="#" class="auth-from__help-link auth-from__help-for">Quên mật khẩu</a>
+                                    <span class="auth-from__help-separate"></span>
+                                    <a href="#" class="auth-from__help-link">Cần trợ giúp?</a>
+                                </div>
+                            </div>
+                            <div class="auth-from__controls">
+                                <button class="btn btn--normal  auth-from__controls-back">TRỞ LẠI</button>
+                                <button class="btn btn--primary">ĐĂNG NHẬP</button>
+                            </div> 
+                        </div>
+                        <div class="auth-from__socials">
+                            <a href="#" class="auth-from__socials--facebook btn btn--size-s btn--with-icon">
+                                <i class="auth-from__socials-icon fab fa-facebook-square"></i>
+                                <span class="auth-from__socials-titel">Kết nói với Facebook</span>
+                            </a>
+                            <a href="#" class="auth-from__socials--google btn btn--size-s btn--with-icon">
+                                <i class="auth-from__socials-icon fab fa-google"></i>
+                                <span class="auth-from__socials-titel"> Kết nói với Google</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>-->
+</body>
+</html>

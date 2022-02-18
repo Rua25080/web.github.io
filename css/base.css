@@ -1,0 +1,222 @@
+:root {
+  /*nơi khai báo biến để nữa gọi mã màu bên kia cho nhanh*/
+  --white-color: #fff;
+  --black-color: #000;
+  --text-color: #333;
+  --primary-color: #ee4d2d;
+  --border-color: #dbdbdb;
+  --star-color: #ffce3e;
+
+  --header-height: 120px;
+  --navbar-height: 34px;
+  --header-with-search-height: calc(
+    var(--header-height) - var(--navbar-height)
+  );
+}
+* {
+  box-sizing: inherit;
+}
+html {
+  font-size: 62.5%;
+  line-height: 1.6rem; /*1 rem = 10px*/
+  font-family: "Roboto", sans-serif; /* sans-serif: là tập hợp các chữ không chân.*/
+  box-sizing: border-box;
+}
+/*---------- Responsive --------*/
+.grid {
+  width: 1200px;
+  max-width: 100%;
+  margin: 0 auto;
+}
+.grid__full-width {
+  width: 100%;
+}
+.grid__row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -5px;
+  margin-right: -5px;
+  padding-bottom: 20px;
+}
+/* -------Test----- */
+.grid__column-2 {
+  padding-left: 5px;
+  padding-right: 5px;
+  width: 13.6667%;
+}
+.grid__column-10 {
+  padding-left: 5px;
+  padding-right: 5px;
+  width: 86.3334%;
+}
+.grid__column-2-4 {
+  padding-left: 5px;
+  padding-right: 5px;
+  width: 20%;
+}
+
+/*Animation*/
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes growth {
+  from {
+    opacity: 0;
+    transform: scale(var(--growth-from));
+  }
+  to {
+    opacity: 1;
+    transform: scale(var(--growth-to));
+  }
+}
+/*modal*/
+.modal {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  animation: fadeIn linear 0.1s;
+}
+.modal__overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  background-color: rgba(62, 59, 59, 0.4);
+  display: none; /*xóa phần này sẽ hiện lại */
+}
+/* .modal__body {
+  text-align: center;
+} */
+/* .modal__body {
+  --growth-from: 0.7; đặt biến cho hiện khung login, đầu tiên là duy chuyển từ kích thước 70% cho tới kích thương nguyên vẹn của nó là 
+  --growth-to: 1;
+  margin: auto;
+  z-index: 1; tạo cho lớp này nằm trên lớp như đc ưu tiên*
+  position: relative; /*cho nằm trên thân dưới*
+  animation: growth linear 0.1s; *animation: kiểu xuất hiện, linear:là kiểu diểu dần lên*
+  display: none; /*xóa phần này sẽ hiện lại khung đk, dn*
+} */
+/*-----Buttom style-----*/
+.btn {
+  min-width: 112px;
+  height: 34px;
+  text-decoration: none;
+  border: none;
+  border-radius: 4px;
+  font-size: 1.5rem;
+  padding: 0 12px;
+  outline: none;
+  cursor: pointer;
+  color: var(--text-color);
+  display: inline-flex; /*inline:nằm ngang*/
+  align-items: center;
+  justify-content: center;
+}
+.btn.btn--normal:hover {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+.btn.btn--size-s {
+  height: 32px;
+  font-size: 12px;
+  padding: 0 8px;
+}
+.btn.btn--primary {
+  color: var(--white-color);
+  background-color: var(--primary-color);
+}
+/* dành cho vô hiệu hóa một nút nào đó
+.btn.btn--disabled {
+  color: rgb(172, 171, 171);
+  cursor: default;
+  background-color: rgb(155, 151, 151);
+}*/
+
+/* ----------Selection--------- */
+.select-input {
+  position: relative;
+  height: 34px;
+  min-width: 150px;
+  padding: 0 12px;
+  border-radius: 2px;
+  background-color: var(--white-color);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 5px 5px rgb(206, 203, 203); /*tạo độ đậm nhạt cho viền khung: 0:tạo bóng hiện bên trái, 1px:tạo bóng hiện bên dưới khung*/
+}
+.select-input__label {
+  font-size: 1.2rem;
+}
+.select-input__icon {
+  font-size: 1.4rem;
+  color: #a7a4a4;
+  position: relative;
+  top: 1px;
+}
+.select-input:hover .select-input__list {
+  display: block;
+}
+.select-input__list {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 25px;
+  border-radius: 2px;
+  background-color: var(--white-color);
+  padding: 8px 14px;
+  list-style: none; /*mất dấu chấm của thẻ ul*/
+  display: none;
+  z-index: 1;
+}
+.select-input__item {
+}
+.select-input__link {
+  display: block;
+  padding: 6px 0;
+  font-size: 1.2rem;
+  color: var(--text-color);
+  text-decoration: none;
+}
+.select-input__link:hover {
+  color: var(--primary-color);
+}
+
+/* ----------pagination--------- */
+.pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  list-style: none;
+}
+
+.pagination-item {
+  margin: 0 8px;
+}
+.pagination-item--active .pagination-item__link {
+  color: var(--white-color);
+  background-color: var(--primary-color);
+}
+.pagination-item--active .pagination-item__link:hover {
+  background-color: #eb6c52;
+}
+.pagination-item__link {
+  --height: 30px;
+  display: block; /* có này ms đặt đc chiều ngang đc*/
+  font-weight: 400;
+  text-decoration: none;
+  font-size: 1.6rem;
+  color: #939393;
+  min-width: 40px;
+  height: var(--height);
+  line-height: var(--height);
+  text-align: center;
+  border-radius: 3px;
+}
